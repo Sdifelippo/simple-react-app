@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import earthquakes from './data/earthquakes.js';
+import earthquakes from '../data/earthquakes.js';
 
 class EarthquakeList extends Component {
   render() {
-    let Earthquakes = earthquakes.features.map((earthquake) => {
+    let quakes = earthquakes.features.map((earthquake) => {
     return (
       <div className="col-sm-6" key={earthquake.id}>
       <div className="card" >
@@ -24,10 +24,10 @@ class EarthquakeList extends Component {
 return(
   <div className="list">
   <div className="row">
-  {Earthquakes}
+  {quakes}
   </div>
   </div>
 )
   }
 }
-export default EathquakeList;
+export default EarthquakeList;
